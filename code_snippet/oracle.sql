@@ -12,3 +12,13 @@
 
 
 
+[层次查询]
+[1]
+select * from org
+start with org_id = 1102
+connect by prior up_org_id = org_id
+[2]
+select area_id, up_ariea_id, area_name, area_level
+from zmp_contract.area_id
+start with area id = 206
+connect by prior up_area_id = area_id;
