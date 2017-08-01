@@ -31,6 +31,7 @@ references zmp.T_VM_ORDER (VM_ORDER_ID);
 alter  table zmp.t_vm_order  add  cpu_mem_type varchar2(60) ;
 comment on column zmp.t_vm_order.cpu_mem_type is '计算资源类型';
 
+--------------------------------------------------------------------------------------------------------------
 
 【oracle数据库操作】
 
