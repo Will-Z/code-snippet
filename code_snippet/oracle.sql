@@ -21,7 +21,11 @@ create table zmp.T_VM  (
   constraint PK_T_VM primary key (T_VM_ID)
 );
 
+--表注释
+COMMENT ON TABLE ZMP.T_VM IS '虚拟机';
+ 
 
+--外键
 alter table zmp.T_VM
   add constraint FK_T_VM_REFERENCE_T_VM_ORD foreign key (T_VM_CUR_ORDER_ID)
 references zmp.T_VM_ORDER (VM_ORDER_ID);
