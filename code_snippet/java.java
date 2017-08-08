@@ -13,3 +13,10 @@
 */
 aList.removeAll(bList);
 aList.addAll(bList);
+
+
+// 取访问者ip
+String ip = request.getHeader("x-forwarded-for");
+if (ip == null) {
+    ip = request.getRemoteAddr();
+}
