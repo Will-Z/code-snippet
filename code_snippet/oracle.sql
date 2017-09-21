@@ -30,6 +30,16 @@ alter table zmp.T_VM
   add constraint FK_T_VM_REFERENCE_T_VM_ORD foreign key (T_VM_CUR_ORDER_ID)
 references zmp.T_VM_ORDER (VM_ORDER_ID);
 
+-------------------------------------------------------------------------------------------------主键约束
+-- 向表中添加主键约束
+ALTER TABLE ACCOUNTS ADD CONSTRAINT PK_ACCOUNTS PRIMARY KEY(ACCOUNTS_NUMBER);
+-- 删除主键
+alter table T_IN_STOCK drop constraint PK_T_IN_STCOK;
+
+-- 查看一个表的主键什么的
+select cu.* from user_cons_columns cu, user_constraints au
+where cu.constraint_name = au.constraint_name and au.constraint_type = 'P' and au.table_name = 'T_IN_STOCK';
+
 
 ----------------------------------------------------------------------------------------------------------增加字段和注释
 alter  table zmp.t_vm_order  add  cpu_mem_type varchar2(60) ;

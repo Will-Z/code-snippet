@@ -20,3 +20,8 @@ String ip = request.getHeader("x-forwarded-for");
 if (ip == null) {
     ip = request.getRemoteAddr();
 }
+
+
+// [zmpweb] 获取登陆者id
+public class ProposalController extends  CommonController  // control 层集成 CommonController
+int staffId = Integer.parseInt(super.getUserSession().getStaffID());
