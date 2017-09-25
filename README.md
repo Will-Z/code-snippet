@@ -1,0 +1,1 @@
+###### some daily and commonly used code sippet
